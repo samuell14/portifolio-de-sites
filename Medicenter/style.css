@@ -1,0 +1,396 @@
+* {
+  font-family: Arial;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex; /*deu inicio ao flex*/
+  justify-content: center; /*para centralizar o logo e o conteúdo da div menu ambos estão no header*/
+}
+.container {
+  display: flex; /*deu inicio ao flex*/
+  justify-content: space-between; /*causou uma separação entre logo e menu nas extremidades*/
+  width: 990px; /*causou uma separação de 990px entre logo e menu nas extremidades*/
+}
+.logo {
+  display: flex; /*deu inicio ao flex*/
+  align-items: center;
+}
+.menu {
+  display: flex; /*deixar os menu em linha*/
+  align-items: center; /*alinhar barra de menu*/
+}
+
+nav ul,
+nav li {
+  list-style: none; /*tirar disc das listas*/
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex; /*deixar os links em linha*/
+}
+
+nav a {
+  display: block;
+  padding: 15px; /*dar espaçamento entre os links*/
+  text-decoration: none; /*retirar subliamento dos links*/
+  text-transform: uppercase; /*letras home maiusculas*/
+  color: #727272;
+}
+
+nav.active a,
+nav a:hover {
+  background-color: #39aae1; /*hover*/
+  color: white; /*texto branco quando ativo*/
+}
+
+#banner {
+  display: flex;
+  justify-content: center;
+  background-image: url("images/img1.jpg"); /*adiciona foto ao fundo*/
+  background-position: center; /*posicionar foto de fundo*/
+  background-size: cover; /*recortar foto proporcionalmente*/
+  height: 670px; /*definir autura da foto de fundo (sem não aparece nada)*/
+}
+
+.column {
+  flex-direction: column; /*coloca os 3 banners na parte inferior*/
+}
+
+.banner_headline {
+  /*para o texto principal*/
+  flex: 1; /*centraliza texto principal*/
+  display: flex;
+  flex-direction: column; /*Texto principal em coluna*/
+  justify-content: center; /*centraliza verticalmente o texto principal*/
+}
+
+.banner_headline h1 {
+  /*formatação do texto principal*/
+  color: white;
+  font-size: 70px;
+  text-shadow: 0px 1px 0px #555555;
+  margin: 0;
+  padding: 0;
+  max-width: 350px; /*largura do texto principal*/
+}
+
+.banner_headline h2 {
+  /*formatção do texto secundario*/
+  color: white;
+  font-size: 21px;
+  text-shadow: 0px 1px 0px #555555;
+  margin: 0;
+  padding: 0;
+  max-width: 350px; /*largura do texto secundario*/
+  margin-top: 30px; /*topo da margem texto secundario*/
+}
+
+.banner_options {
+  height: 210px; /*altura das 3 divs inferiores*/
+  display: flex; /*as 3 divs de inferiores ficam em linha*/
+}
+
+.banner1,
+.banner2,
+.banner3 {
+  /*configuração geral das 3 divs inferiores*/
+  flex: 1;
+  color: white;
+  padding: 20px; /*espaçamento interno do texto das 3 divs inferiores*/
+}
+
+.banner1 {
+  background-color: #39aae1;
+}
+
+.banner2 {
+  background-color: #0079c7;
+}
+
+.banner3 {
+  background-color: #2b4c99;
+}
+
+.banner_title {
+  /*configuração do título dos 3 banners inferiores*/
+  font-size: 21px; /*tamanho do título dos 3 banners inferiores*/
+}
+
+.banner_desc {
+  /*configuração do texto de descrição dos 3 banners inferiores*/
+  font-size: 12px;
+  margin-top: 20px; /*espaçamento superior entre o título e a descrição*/
+  margin-bottom: 20px; /*espaçamento inferior entre o título e a descrição*/
+}
+
+.banner_options a {
+  /*configuração do botão de link*/
+  display: inline-block;
+  border: 1px solid white;
+  padding: 5px; /*tamanho interno do botão de link*/
+  color: white;
+  font-size: 13px;
+  text-decoration: none; /*remover _ do botão de link*/
+}
+
+#geral {
+  /*configuração geral da section príncipal*/
+  display: flex;
+  justify-content: center;
+}
+
+#geral section {
+  flex: 2; /*fazer área de notícias ocupar 2 colunas*/
+}
+
+#geral aside {
+  flex: 1; /*fazer área de departamentos ocupar 1 coluna*/
+}
+
+.widget_title {
+  margin-top: 30px; /*espaçamento superior da área de notícia*/
+  margin-bottom: 20px;
+}
+
+.widget_title_text {
+  /*configuração fonts dos títulos*/
+  color: #000000;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.widget_title_text p {
+  /*configuração fonts dos títulos*/
+  color: #5c5c5c;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.widget_title_bar {
+  /*configuração barrinha em baixo dos títulos*/
+  width: 50px;
+  height: 2px;
+  background-color: #36a9e1;
+  margin-top: 10px;
+}
+
+.flex {
+  /*deixa as notícias em linha*/
+  display: flex;
+  flex-wrap: wrap; /*quando passa da largura posiciona naoutra linha*/
+}
+
+article {
+  flex: 1; /*fazer todas as notícias ocuparem o mesmo tamanho*/
+  min-width: 300px; /* valor mínimo para largura ativar o wrap*/
+  margin-right: 20px; /*afasta as colunas do lado direito*/
+}
+
+article a {
+  text-decoration: none; /*tira sublinhado do link*/
+}
+
+article .news_data {
+  display: flex;
+}
+
+article .news_posted_at {
+  /*configurações do botão data*/
+  background-color: #2b4c99;
+  color: white;
+  font-size: 12px;
+  padding: 10px; /*tamanho interno do botão data*/
+  margin-right: 2px; /*afastamento do lado direito*/
+}
+
+article .news_comments {
+  /*configurações do botão de comentários*/
+  background-color: #39aae1;
+  color: white;
+  font-size: 12px;
+  padding: 10px; /*tamanho interno do botão de comentários*/
+}
+
+article .news_thumbnail {
+  margin-top: 30px; /*espaço entre os botões e as fotos*/
+}
+
+article .news_thumbnail img {
+  /*tamnho de exibição das fotos*/
+  width: 100%;
+  height: auto;
+}
+
+article .news_title {
+  /*configurações dos títulos das notícias*/
+  margin-top: 25px;
+  color: black;
+  font-size: 23px;
+}
+
+article .news_resume {
+  /*configuração do texto de descrição*/
+  line-height: 20px; /*espaçamento das linha do texto de descrição*/
+  color: #5c5c5c;
+  font-size: 14px;
+  margin-bottom: 30px; /*espaço inferior entre o texto de descrição e os botões inferiores*/
+}
+
+.widget_body {
+  margin-top: 10px;
+}
+
+footer {
+  /*configuração geral de rodapé*/
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_menu {
+  display: flex; /*deixar menu de rodapé em linha*/
+}
+
+.footer_menu a {
+  /*configuração geral links do menu rodapé*/
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+
+.fm_1,
+.fm_2,
+.fm_3 {
+  /*configuração geral de menu rodapé*/
+  flex: 1;
+  color: white;
+  padding: 20px; /*tamanho interno do menu rodapé*/
+}
+
+.fm_1 {
+  background-color: #39aae1;
+}
+
+.fm_2 {
+  background-color: #0079c7;
+}
+
+.fm_3 {
+  background-color: #2b4c99;
+}
+
+.footer_area {
+  display: flex; /*deixar área de rodapé em linha*/
+}
+
+.footer_areaitem {
+  flex: 1; /*fazer areia de rodapé ocupar espaços iguais*/
+  color: white;
+}
+
+.flexColumn {
+  flex-direction: column; /*posiciona layout geral de rodapé*/
+}
+
+footer .widget_title_text {
+  color: white; /* texto do título da área de rodapé*/
+}
+
+.footer_copy {
+  /*configuração geral de copyright rodapé*/
+  border-top: 1px solid #2c2c2c; /*linha de cima copy*/
+  height: 40px;
+  line-height: 40px; /*centralizou copy*/
+  color: #5c5c5c;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.mm_line {
+  height: 3px;
+  background-color: #39aae1;
+}
+
+.menuMobile {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+  .banner_headline h1 {
+    font-size: 55px;
+  }
+  .banner_headline h2 {
+    font-size: 17px;
+  }
+  .banner_options {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .banner_headline {
+    padding: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  #geral section,
+  aside {
+    padding: 20px;
+  }
+
+  .footer_menu {
+    flex-direction: column;
+  }
+
+  .footer_area {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .footer_copy {
+    padding: 20px;
+  }
+
+  header .container {
+    flex-direction: row;
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: white;
+  }
+
+  header {
+    height: auto;
+  }
+
+  .logo {
+    padding: 20px;
+  }
+
+  .menuMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
